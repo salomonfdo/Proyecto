@@ -1,0 +1,11 @@
+
+@Rest
+Feature: Employee feature
+
+  @GetEmployees
+  Scenario: Title of your scenario
+    Given User set valid auth key
+    When User send a Get reuqest on "https://reqres.in/api/"  
+    Then User should get Status code 200
+
+

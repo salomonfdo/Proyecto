@@ -1,0 +1,12 @@
+import org.testng.annotations.Test;
+public class RestAssured {
+	
+	
+	QTest()
+	public void Test1{
+		
+	}
+	
+	
+
+}

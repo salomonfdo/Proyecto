@@ -1,0 +1,26 @@
+package apiStepDefinitions;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class EmplyeeStepDefinitions {
+	
+	@Given("User set valid auth key")
+	public void user_set_valid_auth_key() {
+	    System.out.println("Correct auth")
+	}
+
+	@When("User send a Getrequest on {string}")
+	public void user_send_a_Getrequest_on(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("Hola")
+	}
+
+	@Then("User should get status code {int}")
+	public void user_should_get_status_code(Integer int1) {
+	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("Mundo")
+	}
+
+}

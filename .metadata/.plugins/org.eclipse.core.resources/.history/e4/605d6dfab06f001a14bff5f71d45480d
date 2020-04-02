@@ -1,0 +1,19 @@
+package stepDefinitions;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.Given;
+
+public class GivenTest {
+
+	public static WebDriver driver = SetUpClass.driver;
+	LogInPage lg;
+	@Given("User is on login page")
+	public void user_is_on_login_page() {
+	    System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+	    driver.manage().window().maximize();
+	}
+}

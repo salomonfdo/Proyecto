@@ -1,0 +1,17 @@
+package apiPageObjects;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+public class SetUp {
+	public Response response;
+	public RequestSpecification request;
+	
+	public SetUp () {
+		RstAssured.baseURI = 
+		request = RestAssured.given();
+				
+	}
+	
+}

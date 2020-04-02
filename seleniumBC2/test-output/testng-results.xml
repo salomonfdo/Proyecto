@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="2" total="5" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="7105" started-at="2020-04-01T11:45:06 PDT" finished-at="2020-04-01T11:45:13 PDT">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="7105" started-at="2020-04-01T11:45:06 PDT" finished-at="2020-04-01T11:45:13 PDT">
+      <class name="RestAssuredTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:RestAssuredTest@15d0c81b]" name="setUp" is-config="true" duration-ms="1345" started-at="2020-04-01T11:45:06 PDT" finished-at="2020-04-01T11:45:07 PDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="test3()[pri:0, instance:RestAssuredTest@15d0c81b]" name="test3" duration-ms="4509" started-at="2020-04-01T11:45:07 PDT" finished-at="2020-04-01T11:45:12 PDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3 -->
+        <test-method status="PASS" signature="test4()[pri:0, instance:RestAssuredTest@15d0c81b]" name="test4" duration-ms="685" started-at="2020-04-01T11:45:12 PDT" finished-at="2020-04-01T11:45:13 PDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test4 -->
+        <test-method status="PASS" signature="test5()[pri:0, instance:RestAssuredTest@15d0c81b]" name="test5" duration-ms="447" started-at="2020-04-01T11:45:13 PDT" finished-at="2020-04-01T11:45:13 PDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test5 -->
+      </class> <!-- RestAssuredTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

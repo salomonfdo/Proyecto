@@ -1,0 +1,62 @@
+package stepDefinitions;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
+
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import pageObjects.LoginPage;
+import pageObjects.Purchasing;
+
+public class WhenTest {
+	LoginPage lg;
+	Purchasing purch;
+	public static WebDriver driver = GivenTest.driver;
+	@When("User enter userame as {string}")
+	public void user_enter_userame_as(String email) {
+		lg = new LoginPage(driver);
+		lg.sendEmail(email);
+	}
+
+	@When("User enters password as {string}")
+	public void user_enters_password_as(String password) {
+		lg.sendPass(password);
+		
+	}
+
+	@When("User click on Sign in button")
+	public void user_click_on_Sign_in_button() {
+		lg.clickSubmit();
+	}
+	
+	@When("User click on Forgot your password link")
+	public void user_click_on_Forgot_your_password_link() {
+		WebElement linkFP = driver.findElement(By.xpath("//*[@id=\"login_form\"]/div/p[1]/a"));
+		linkFP.click();
+		
+	}
+	
+	@Then("User click on Woman")
+	public void user_click_on_Woman() {
+		purch = new Purchasing(driver);
+		purch.clickWomanbtn();
+		WebElement lblHeading = driver.findElement(By.className("cat-name"));
+		Assert.assertTrue(driver.getCurrentUrl().equals("http://automationpractice.com/index.php?id_category=3&controller=category"));
+		
+	}
+	
+	@Then("User click on Add product")
+	public void user_click_on_Add_product() {
+		Actions actions = new Actions(driver);
+		WebElement divadd = driver.findElement(By.xpath("//*[@id=\"center_column\"]/ul/li[1]/div"));
+		purch.clickAdd();
+		WebElement lblHeading = driver.findElement(By.className("cat-name"));
+		Assert.assertTrue(driver.getCurrentUrl().equals("http://automationpractice.com/index.php?id_category=3&controller=category"));
+		driver.quit();
+	}
+	
+
+}

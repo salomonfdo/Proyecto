@@ -1,0 +1,23 @@
+package apiPageObjects;
+
+public class GetEmployees extends SetUp {
+	public GetEmployees(String endPoint) {
+		super();
+		runApi(endPoint);
+	}
+	
+	public GetEmployees(String endPoint, int id) {
+		super();
+		runApi(endPoint, id);
+	}	
+
+	private void runApi(String endPoint) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void runApi(String endPoint, int id) {
+		// TODO Auto-generated method stub
+		
+	}
+}

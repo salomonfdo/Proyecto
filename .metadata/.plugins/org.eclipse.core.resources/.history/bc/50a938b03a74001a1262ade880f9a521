@@ -1,0 +1,8 @@
+package apiStepDefinitions;
+
+import io.restassured.response.Response;
+
+public class SetUp {
+	public Response response;
+	
+}

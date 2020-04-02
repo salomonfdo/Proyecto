@@ -1,0 +1,38 @@
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+public class RestAssuredTest {
+	public Response response;
+	public RequestSpecification request;
+
+	@BeforeTest
+	public void setUp() {
+		RestAssured.baseURI = "http://reqres.in/api/";
+		request = RestAssured.given();
+
+	}
+
+	@Test()
+	public void Test1() {
+		response = request.given().when().get("users");
+
+		System.out.print(response.asString());
+	}
+
+	@Test()
+	public void Test2() {
+		response = request
+				.given()
+				.pathParam("id", 1)
+				.when()
+				.get("users/{id}");
+			response.then().statusCode(200);	
+
+		System.out.print(response.asString());
+	}
+
+}
